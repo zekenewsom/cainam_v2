@@ -1,7 +1,4 @@
 {
-  "/ask/page": "app/ask/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/insights/page": "app/insights/page.js",
-  "/page": "app/page.js",
-  "/taxes/page": "app/taxes/page.js"
+  "/page": "app/page.js"
 }

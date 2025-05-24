@@ -1,0 +1,18 @@
+
+
+> web@0.1.0 dev /Users/zeke/projects/cainam_v2/packages/web
+> next dev --turbopack
+
+ [33m[1m⚠[22m[39m Port 3000 is in use, using available port 3001 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.3.1[39m[22m (Turbopack)
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.205:3001
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 817ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.2s
+ GET / [32m200[39m in 2706ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 217ms
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 464ms
+[?25h
