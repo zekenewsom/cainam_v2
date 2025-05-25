@@ -3,16 +3,25 @@
 > web@0.1.0 dev /Users/zeke/projects/cainam_v2/packages/web
 > next dev --turbopack
 
- [33m[1m⚠[22m[39m Port 3000 is in use, using available port 3001 instead.
    [1m[38;2;173;127;168m▲ Next.js 15.3.1[39m[22m (Turbopack)
-   - Local:        http://localhost:3001
-   - Network:      http://192.168.1.205:3001
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.205:3000
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 817ms
+ [32m[1m✓[22m[39m Ready in 990ms
  [37m[1m○[22m[39m Compiling / ...
- [32m[1m✓[22m[39m Compiled / in 2.2s
- GET / [32m200[39m in 2706ms
- [32m[1m✓[22m[39m Compiled /favicon.ico in 217ms
- GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 464ms
+ [32m[1m✓[22m[39m Compiled / in 1854ms
+ GET / [32m200[39m in 2277ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 232ms
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 486ms
+ [37m[1m○[22m[39m Compiling /insights ...
+ [32m[1m✓[22m[39m Compiled /insights in 664ms
+ GET /insights [32m200[39m in 819ms
+ [37m[1m○[22m[39m Compiling /portfolio ...
+ [32m[1m✓[22m[39m Compiled /portfolio in 635ms
+ GET /portfolio [32m200[39m in 758ms
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 224ms
+ [32m[1m✓[22m[39m Compiled /taxes in 395ms
+ GET /taxes [32m200[39m in 551ms
+ GET / [32m200[39m in 46ms
 [?25h
