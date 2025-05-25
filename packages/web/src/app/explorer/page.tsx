@@ -2,47 +2,99 @@
 import React from 'react';
 import NavBar from '../../components/NavBar';
 import ResourceCard from './ResourceCard';
-import GainLossAnalysis from '../../components/GainLossAnalysis';
-import EstimatedMiscIncome from '../../components/EstimatedMiscIncome';
+import KeyMetrics from '../../components/KeyMetrics';
+import SentimentGauge from '../../components/SentimentGauge';
 import ActivityTable from '../../components/ActivityTable';
+import Script from 'next/script';
 
-export default function TaxesPage() {
+export default function ExplorerPage() {
+  React.useEffect(() => {
+    // Clean up any previous widget
+    const chartDiv = document.getElementById('tradingview_advanced_chart');
+    if (chartDiv) chartDiv.innerHTML = '';
+
+    function loadWidget() {
+      // @ts-ignore
+      if (window.TradingView) {
+        // @ts-ignore
+        new window.TradingView.widget({
+          autosize: true,
+          symbol: 'BINANCE:BTCUSDT',
+          interval: 'D',
+          timezone: 'Etc/UTC',
+          theme: 'light',
+          style: '1',
+          locale: 'en',
+          container_id: 'tradingview_advanced_chart',
+        });
+      }
+    }
+
+    // If TradingView is already loaded
+    // @ts-ignore
+    if (window.TradingView) {
+      loadWidget();
+    } else {
+      // Otherwise, inject the script
+      const script = document.createElement('script');
+      script.src = 'https://s3.tradingview.com/tv.js';
+      script.onload = loadWidget;
+      document.body.appendChild(script);
+      return () => {
+        script.onload = null;
+      };
+    }
+    // Clean up widget on unmount
+    return () => {
+      if (chartDiv) chartDiv.innerHTML = '';
+    };
+  }, []);
+
   const [showModule, setShowModule] = React.useState<string | null>(null);
   const [documentsYear, setDocumentsYear] = React.useState('2024');
+  const [searchValue, setSearchValue] = React.useState("");
   return (
     <>
+
       <NavBar />
       <main className="min-h-screen bg-gray-50 p-8 space-y-8">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Taxes</h1>
-          <div className="mt-4 md:mt-0 flex flex-col items-end gap-2">
-            <div className="flex gap-2 mb-2">
-              <button
-                className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200"
-                onClick={() => setShowModule('documents')}
-              >
-                Documents
-              </button>
-              <button
-                className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200"
-                onClick={() => setShowModule('resources')}
-              >
-                Resources
-              </button>
-              <button
-                className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded hover:bg-gray-200"
-                onClick={() => setShowModule('settings')}
-              >
-                Settings
-              </button>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Explorer</h1>
+        </div>
+        {/* Search Bar */}
+        <div className="mb-6 flex justify-center">
+          <input
+            type="text"
+            className="w-full max-w-4xl px-6 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 text-black text-lg italic"
+            placeholder="Enter token address (e.g. 0x...)"
+            value={searchValue}
+            onChange={e => setSearchValue(e.target.value)}
+          />
+        </div>
+        {/* Chart and Analysis Modules */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch min-h-[540px]">
+          {/* TradingView Chart */}
+          <div className="w-full h-full">
+            <div id="tradingview-widget-container" className="w-full h-full min-h-[540px] bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
+              <div id="tradingview_advanced_chart" className="flex-1 h-full w-full"></div>
+            </div>
+          </div>
+          {/* Analysis Modules */}
+          <div className="flex flex-col gap-6 h-full justify-between min-h-[540px]">
+            <KeyMetrics />
+            <h2 className="text-xl font-bold text-gray-900 mb-4 px-2 uppercase">Sentiment Analysis</h2>
+            <div className="flex flex-row gap-6 w-full justify-between items-center">
+              <SentimentGauge value={60} label="X" />
+              <SentimentGauge value={72} label="Telegram" />
+              <SentimentGauge value={45} label="News" />
             </div>
           </div>
         </div>
-        {/* Top Analysis Modules */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <GainLossAnalysis />
-          <EstimatedMiscIncome />
-        </div>
+
+        {/* TradingView Widget Script */}
+        {/* The widget is now managed by useEffect below */}
+
+
         {/* Activity Table */}
         <ActivityTable />
 
@@ -139,7 +191,7 @@ export default function TaxesPage() {
                       url="https://www.kraken.com/learn/crypto-tax-guide"
                     />
                     <ResourceCard
-                      title="CoinLedger: Crypto Taxes – The Complete Guide (2025)"
+                      title="CoinLedger: Crypto Explorer – The Complete Guide (2025)"
                       description="Step-by-step guide explaining tax implications, required forms, and IRS enforcement trends for crypto holders."
                       url="https://coinledger.io/guides/crypto-tax"
                     />
@@ -159,7 +211,7 @@ export default function TaxesPage() {
                       url="https://help.coinbase.com/en/coinbase/taxes/general-information/tax-info"
                     />
                     <ResourceCard
-                      title="Coinbase: Understanding Crypto Taxes"
+                      title="Coinbase: Understanding Crypto Explorer"
                       description="Educational article on how using crypto can affect your U.S. taxes, what’s taxable, and links to further resources."
                       url="https://www.coinbase.com/learn/crypto-basics/understanding-crypto-taxes"
                     />

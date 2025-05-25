@@ -130,8 +130,8 @@ const NAV_LINKS = [
         href: '/portfolio'
     },
     {
-        label: 'Taxes',
-        href: '/taxes'
+        label: 'Explorer',
+        href: '/explorer'
     },
     {
         label: 'Ask',
@@ -166,7 +166,7 @@ function NavBar() {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$3$2e$1_react$2d$dom$40$19$2e$0$2e$0_react$40$19$2e$0$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         href: "/",
                         className: "text-2xl font-bold text-black tracking-tight",
-                        children: "HighWater Protocol"
+                        children: "CAINAM"
                     }, void 0, false, {
                         fileName: "[project]/packages/web/src/components/NavBar.tsx",
                         lineNumber: 40,

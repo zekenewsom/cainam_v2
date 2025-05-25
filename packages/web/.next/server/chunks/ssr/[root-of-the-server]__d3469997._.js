@@ -127,7 +127,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$packages$2f$web$2f$src$2f$co
 ;
 ;
 const metadata = {
-    title: "HighWater Protocol",
+    title: "CAINAM",
     description: "Digital Asset Intelligence for Wealth Advisors"
 };
 function RootLayout({ children }) {

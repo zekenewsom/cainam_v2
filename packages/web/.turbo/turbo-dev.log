@@ -8,20 +8,39 @@
    - Network:      http://192.168.1.205:3000
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 990ms
+ [32m[1m✓[22m[39m Ready in 846ms
  [37m[1m○[22m[39m Compiling / ...
- [32m[1m✓[22m[39m Compiled / in 1854ms
- GET / [32m200[39m in 2277ms
- [32m[1m✓[22m[39m Compiled /favicon.ico in 232ms
- GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 486ms
+ [32m[1m✓[22m[39m Compiled / in 1814ms
+ GET / [32m200[39m in 2276ms
+ [32m[1m✓[22m[39m Compiled /favicon.ico in 242ms
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 496ms
+ [32m[1m✓[22m[39m Compiled /explorer in 406ms
+ GET /explorer [32m200[39m in 563ms
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 237ms
+ [32m[1m✓[22m[39m Compiled in 324ms
+ [32m[1m✓[22m[39m Compiled in 341ms
+ [32m[1m✓[22m[39m Compiled in 357ms
+ [32m[1m✓[22m[39m Compiled in 189ms
+ [32m[1m✓[22m[39m Compiled in 426ms
+ [32m[1m✓[22m[39m Compiled in 374ms
  [37m[1m○[22m[39m Compiling /insights ...
- [32m[1m✓[22m[39m Compiled /insights in 664ms
- GET /insights [32m200[39m in 819ms
+ [32m[1m✓[22m[39m Compiled /insights in 840ms
+ GET /insights [32m200[39m in 1059ms
+ GET /explorer [32m200[39m in 161ms
+ [32m[1m✓[22m[39m Compiled in 205ms
+ [32m[1m✓[22m[39m Compiled in 188ms
+ GET /insights [32m200[39m in 42ms
+ GET /explorer [32m200[39m in 161ms
+ [32m[1m✓[22m[39m Compiled in 182ms
+ [32m[1m✓[22m[39m Compiled in 197ms
+ [32m[1m✓[22m[39m Compiled in 185ms
+ [32m[1m✓[22m[39m Compiled in 211ms
  [37m[1m○[22m[39m Compiling /portfolio ...
- [32m[1m✓[22m[39m Compiled /portfolio in 635ms
- GET /portfolio [32m200[39m in 758ms
- GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 224ms
- [32m[1m✓[22m[39m Compiled /taxes in 395ms
- GET /taxes [32m200[39m in 551ms
- GET / [32m200[39m in 46ms
+ [32m[1m✓[22m[39m Compiled /portfolio in 819ms
+ GET /portfolio [32m200[39m in 952ms
+ GET /insights [32m200[39m in 48ms
+ GET / [32m200[39m in 44ms
+ GET /explorer [32m200[39m in 165ms
+ GET /portfolio [32m200[39m in 41ms
+ GET /explorer [32m200[39m in 39ms
 [?25h

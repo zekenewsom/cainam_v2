@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Insights', href: '/insights' },
   { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Taxes', href: '/taxes' },
+  { label: 'Explorer', href: '/explorer' },
   { label: 'Ask', href: '/ask' },
 ];
 
@@ -37,7 +37,7 @@ export default function NavBar() {
     <header className="bg-white border-b border-gray-200 shadow-sm w-full">
       <nav className="w-full px-4 sm:px-6 lg:px-8 flex items-center h-16">
         <div className="flex-1 flex items-center justify-start min-w-0">
-          <Link href="/" className="text-2xl font-bold text-black tracking-tight">HighWater Protocol</Link>
+          <Link href="/" className="text-2xl font-bold text-black tracking-tight">CAINAM</Link>
         </div>
         <ul className="flex-1 flex justify-center gap-2 md:gap-4 lg:gap-6 min-w-0">
           {NAV_LINKS.map(link => (

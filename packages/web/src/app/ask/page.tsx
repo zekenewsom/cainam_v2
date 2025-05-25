@@ -230,7 +230,7 @@ export default function AskPage() {
                           : 'bg-white text-gray-900 border border-gray-200 rounded-bl-lg'}
                           animate-fade-in`}
                       >
-                        <span className="block font-semibold mb-1 text-xs opacity-70">{msg.sender === 'user' ? 'You' : 'HighWater Protocol'}</span>
+                        <span className="block font-semibold mb-1 text-xs opacity-70">{msg.sender === 'user' ? 'You' : 'CAINAM'}</span>
                         {msg.text}
                       </div>
                     </div>
@@ -238,7 +238,7 @@ export default function AskPage() {
                   {loading && (
                     <div className="flex justify-start">
                       <div className="max-w-[70%] px-5 py-3 rounded-2xl shadow-md text-base bg-white text-gray-900 border border-gray-200 rounded-bl-lg animate-pulse">
-                        <span className="block font-semibold mb-1 text-xs opacity-70">HighWater Protocol</span>
+                        <span className="block font-semibold mb-1 text-xs opacity-70">CAINAM</span>
                         <span className="italic">Thinking...</span>
                       </div>
                     </div>

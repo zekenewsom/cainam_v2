@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HighWater Protocol",
+  title: "CAINAM",
   description: "Digital Asset Intelligence for Wealth Advisors",
 };
 
